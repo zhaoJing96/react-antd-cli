@@ -26,19 +26,18 @@ export default function Logo(props) {
     } else {
         logoSize = 32;
     }
-    // const logoIcon = type === 1 ? logoWhite : logoBlack;
     const logoStyle = { width: logoSize + 'px', height: logoSize + 'px', verticalAlign: 'middle' };
     const textStyle = { paddingLeft: '16px', color: type === 1 ? '#fff' : '#666', fontSize: '1.4em', verticalAlign: 'middle', fontWeight: '600' };
     let logoNode = null;
     if (link) {
         logoNode = <Link to={link}>
             <img src={logoIcon} style={logoStyle} />
-            <span style={textStyle}>智安汇运营管理系统</span>
+            <span style={textStyle}>管理系统</span>
         </Link>;
     } else {
         logoNode = <span>
             <img src={logoIcon} style={logoStyle} />
-            <span style={textStyle}>智安汇运营管理系统</span>
+            <span style={textStyle}>管理系统</span>
         </span>;
     }
     return logoNode;

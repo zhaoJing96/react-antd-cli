@@ -17,7 +17,7 @@ module.exports = {
         path: resolve('public'),
         publicPath: '/',
         host: "localhost",
-        port: 2333,
+        port: 5555,
         proxy: {
             /*代理跨域,*同webpack-dev-server的proxy设置一样,axios, fetch, jquery中的请求路径不能拼接root, 不能设置baseUrl地址*/
             '/api': {
