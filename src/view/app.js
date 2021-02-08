@@ -1,5 +1,4 @@
 import React, { Fragment, Suspense, lazy } from 'react';
-// import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { Router, Route, Switch } from 'react-router-dom';
 import router from '@/common/router';
 import { LoadingSpin } from '@/view/component';
@@ -11,7 +10,6 @@ const Main = lazy(() => import('@/view/main'));
 const HomeWapper = lazy(() => import('@/view/home'));
 const Login = lazy(() => import('@/view/login'));
 //home
-const ReduxDemo = lazy(() => import('@/view/home_redux'));
 
 export default function View() {
 
@@ -23,8 +21,7 @@ export default function View() {
                     <Route path="/home/*">
                         <HomeWapper>
                             <Switch>
-                                {/* 首页默认加载成员管理 */}
-                                <Route path="/home/reduxDemo" component={ReduxDemo}></Route>
+                                {/* 菜单页面 */}
                                 <Route component={PageNoFind} />
                             </Switch>
                         </HomeWapper>

@@ -7,7 +7,6 @@ import { LockOutlined } from '@ant-design/icons';
 import { getImgCode64 } from '@/common/api/login';
 import { setToken } from '@/common/utils';
 import Logo from '@/view/component/logo';
-import MainFoot from '@/view/component/foot';
 import { LOGINSECRET } from '@/common/api/login';
 
 const { Header, Content } = Layout;
@@ -108,7 +107,6 @@ const Login = observer(() => {
                 </Content>
             </Layout>
         </Layout>
-        <MainFoot />
     </Fragment>;
 });
 export default Login;
