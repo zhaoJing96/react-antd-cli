@@ -8,7 +8,8 @@ import View from './view/app';
 /**
  * import less
  * **/
-import '@/assets/style/index.less';
+require('@/assets/style/index.less');
+// import '@/assets/style/index.less'; // 样式引入不了
 
 function App() {
     //antd国际化,默认中文

@@ -105,8 +105,5 @@
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
-  },
-  "repository": "https://github.com/qjwvtd/react-antd-cli.git",
-  "author": "qjwvtd",
-  "license": "MIT"
+  }
 }
