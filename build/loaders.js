@@ -19,11 +19,15 @@ const babelLoader = {
         loader: 'babel-loader',
         options: {
             presets: [
-                ['@babel/preset-env', { targets: "defaults" }]
+                ['@babel/preset-env', {
+                    targets: "defaults"
+                }]
             ],
             plugins: [
                 //支持装饰器语法
-                ["@babel/plugin-proposal-decorators", { "legacy": true }]
+                ["@babel/plugin-proposal-decorators", {
+                    "legacy": true
+                }]
             ]
         }
     }
@@ -32,8 +36,12 @@ const cssLoader = {
     test: /\.css$/,
     use: [
         MiniCssExtractPlugin.loader,
-        { loader: 'style-loader' },
-        { loader: 'css-loader' }
+        {
+            loader: 'style-loader'
+        },
+        {
+            loader: 'css-loader'
+        }
     ],
     include: __include__dirname,
     exclude: /node_modules/
@@ -42,11 +50,15 @@ const lessLoader = {
     test: /\.less$/,
     use: [
         MiniCssExtractPlugin.loader,
-        { loader: 'css-loader' },
+        {
+            loader: 'css-loader'
+        },
         {
             loader: 'less-loader', // compiles Less to CSS
             options: {
-                lessOptions: { javascriptEnabled: true }
+                lessOptions: {
+                    javascriptEnabled: true
+                }
             }
         }
     ]
@@ -55,40 +67,52 @@ const scssLoader = {
     test: /\.scss$/,
     use: [
         MiniCssExtractPlugin.loader,
-        { loader: 'css-loader' },
-        { loader: 'sass-loader' }
+        {
+            loader: 'css-loader'
+        },
+        {
+            loader: 'sass-loader'
+        }
     ]
 };
 const sassLoader = {
     test: /\.scss$/,
     use: [
         MiniCssExtractPlugin.loader,
-        { loader: 'css-loader' },
-        { loader: 'sass-loader' }
+        {
+            loader: 'css-loader'
+        },
+        {
+            loader: 'sass-loader'
+        }
     ],
     include: __include__dirname,
     exclude: /node_modules/
 };
 const imgLoader = {
     test: /\.(png|jpg|jpeg|gif)$/,
-    use: [
-        {
-            loader: 'url-loader',
-            options: {
-                // limit: 128,
-                limit: 8 * 1024,
-                // 关闭es6
-                esModule: false,
-                name: env.dev ? 'static/img/[name]_[hash:8].[ext]' : env.prod && '/static/img/[name]_[hash:8].[ext]'
-            }
+    use: [{
+        loader: 'url-loader',
+        options: {
+            // limit: 128,
+            limit: 8 * 1024,
+            // 关闭es6
+            esModule: false,
+            name: env.dev ? 'static/img/[name]_[hash:8].[ext]' : env.prod && '/static/img/[name]_[hash:8].[ext]'
         }
-    ],
+    }],
     include: __include__dirname,
     exclude: /node_modules/
 };
 const fileLoader = {
-    test: /\.(eot|svg|ttf|otf|woff|woff2|mp3|mp4)/,
-    use: [{ loader: 'file-loader', options: { limit: 128, name: env.dev ? 'static/fonts/[name]_[hash:8].[ext]' : env.prod && '/static/fonts/[name]_[hash:8].[ext]' } }],
+    test: /\.(eot|svg|ttf|otf|woff|woff2|mp3|mp4|glb)/,
+    use: [{
+        loader: 'file-loader',
+        options: {
+            limit: 128,
+            name: env.dev ? 'static/fonts/[name]_[hash:8].[ext]' : env.prod && '/static/fonts/[name]_[hash:8].[ext]'
+        }
+    }],
     include: __include__dirname,
     exclude: /node_modules/
 };
