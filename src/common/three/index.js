@@ -3,7 +3,7 @@
  * three.js本身包含了基础的工具包
  * 部分不包含的,需要全局注册
  */
-import * as THREE from 'three';
+// import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { TWEEN } from 'three/examples/jsm/libs/tween.module.min.js'; // 补间动画
@@ -13,6 +13,8 @@ import { CSS3DObject, CSS3DRenderer } from 'three/examples/jsm/renderers/CSS3DRe
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass';
+const THREE = require('three');
+// const { GLTFLoader } = require('three/examples/jsm/loaders/GLTFLoader');
 THREE.GLTFLoader = GLTFLoader;
 THREE.OrbitControls = OrbitControls;
 THREE.TWEEN = TWEEN;
