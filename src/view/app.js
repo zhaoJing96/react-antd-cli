@@ -7,7 +7,6 @@ import { LoadingSpin } from '@/view/component';
 const PageNoFind = lazy(() => import('@/view/exception/404'));
 const Error = lazy(() => import('@/view/exception/error'));
 const Main = lazy(() => import('@/view/main'));
-const DataHub = lazy(() => import('@/view/dataHub'));
 const HomeWapper = lazy(() => import('@/view/home'));
 const Login = lazy(() => import('@/view/login'));
 //home
@@ -18,7 +17,6 @@ export default function View() {
         <Router history={router}>
             <Suspense fallback={<LoadingSpin />}>
                 <Switch>
-                    <Route exact path="/dataHub" component={DataHub} />
                     <Route path="/home/*">
                         <HomeWapper>
                             <Switch>

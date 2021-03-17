@@ -14,7 +14,6 @@ import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass';
 import { OutlinePass } from 'three/examples/jsm/postprocessing/OutlinePass';
 const THREE = require('three');
-// const { GLTFLoader } = require('three/examples/jsm/loaders/GLTFLoader');
 THREE.GLTFLoader = GLTFLoader;
 THREE.OrbitControls = OrbitControls;
 THREE.TWEEN = TWEEN;
